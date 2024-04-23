@@ -21,7 +21,7 @@ def get_labels(frame_wise_labels):
 
     tmp = [0]
     count = 0
-    for key, group in itertools.groupby(frame_wise_labels):
+    for key, group in itertools.groupby(frame_wise_labels):  # 'AAAB'   key :'A','B' ;group:['A','A','A'],['B']
         action_len = len(list(group))
         tmp.append(tmp[count] + action_len)
         count += 1
@@ -55,9 +55,9 @@ def f_score(predicted, ground_truth, overlap):
     fn = len(y_label) - sum(hits)
     return float(tp), float(fp), float(fn)
 
-def f1_at_X(gt, preds):
+def f1_at_X(gt, preds):                           # f1score精确率和召回率的调和平均数
     metrics = dict()
-    overlap = [.1, .25, .5] # F1 @ [10, 25, 50]
+    overlap = [.1, .25, .5] # F1 @ [10, 25, 50]   # 召回率重要性
     tp, fp, fn = np.zeros(3), np.zeros(3), np.zeros(3)
     for s in range(len(overlap)):
         tp1, fp1, fn1 = f_score(preds, gt, overlap[s])
@@ -69,7 +69,7 @@ def f1_at_X(gt, preds):
         recall = tp[s] / float(tp[s] + fn[s])
 
         f1_ = 2.0 * (precision * recall) / (precision + recall)
-        f1_ = np.nan_to_num(f1_) * 100
+        f1_ = np.nan_to_num(f1_) * 100            # 用零替换nan元素
         metrics[f'F1@{(int(overlap[s]*100))}'] = f1_
         
     return metrics
@@ -116,7 +116,10 @@ def compute_metrics(preds, gt, regression_preds, regressoin_gt, target_names, is
     rmse = {'RMSE_'+k: v for k, v in zip(trajectory_feature_names, np.sqrt(mean_squared_error(regressoin_gt, regression_preds, multioutput='raw_values')).reshape(-1).tolist())}
     mae = {'MAE_'+k: v for k, v in zip(trajectory_feature_names, mean_absolute_error(regressoin_gt, regression_preds, multioutput='raw_values').reshape(-1).tolist())}
     mape = {'MAPE_'+k: v for k, v in zip(trajectory_feature_names, mean_absolute_percentage_error(regressoin_gt, regression_preds, multioutput='raw_values').reshape(-1).tolist())}
-    metrics = metrics | rmse | mape | mae
+    #metrics = metrics | rmse | mape | mae
+    metrics.update(rmse)
+    metrics.update(mape)
+    metrics.update(mae)
 
     # F1 @ X
     if not is_train:

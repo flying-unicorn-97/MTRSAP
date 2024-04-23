@@ -131,7 +131,7 @@ subjects = [2,3,4,5,6,7,8,9]
 
 accuracy = []
 
-print("len dataloader:",train_dataloader.dataset.__len__())
+print("len dataloader:",train_dataloader.dataset.__len__())    # num_batch
 # input("Press any key to begin training...")
 # Train Loop
 

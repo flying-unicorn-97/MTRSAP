@@ -53,7 +53,7 @@ def get_dataloaders(tasks: List[str],
     def _get_files_except_user(task, data_path, subject_id_to_exclude: int) -> List[str]:
         assert(task in all_tasks)
         files = os.listdir(data_path)
-        csv_files = [p for p in files if p.endswith(".csv")]
+        csv_files = [p for p in files if p.endswith(".csv")]    # endswith 判定字符串后缀结尾
         with open(os.path.join(data_path, "video_feature_files.txt"), 'r') as fp:
             video_files = fp.read().strip().split('\n')
         csv_files.sort(key = lambda x: os.path.basename(x)[:-4])
@@ -68,11 +68,11 @@ def get_dataloaders(tasks: List[str],
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     train_files_path, valid_files_path = list(), list()
     for task in tasks:
-        data_path = os.path.join("ProcessedDatasets", task)
+        data_path = os.path.join("./ProcessedDatasets", task)
         tp, vp = _get_files_except_user(task, data_path, subject_id_to_exclude)
         train_files_path += tp
         valid_files_path += vp
-    train_kin_files, train_resnet_files = zip(*train_files_path)
+    train_kin_files, train_resnet_files = zip(*train_files_path)  # 拆包
     valid_kin_files, valid_resnet_files = zip(*valid_files_path)
 
     if not include_resnet_features:

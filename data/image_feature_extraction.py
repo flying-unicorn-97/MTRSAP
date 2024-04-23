@@ -8,7 +8,7 @@ from torchvision.models import resnet50, ResNet50_Weights
 import warnings
 warnings.filterwarnings('ignore')
 
-from .datagen import JIGSAWS_tasks, image_features_save_path
+from data.datagen import JIGSAWS_tasks, image_features_save_path
 
 
 class ResNet50Features(torch.nn.Module):
@@ -40,6 +40,7 @@ def extract_features_from_video(video_path, model, device='cuda'):
             for _ in range(batch_size):
                 ret, frame = cap.read()
                 if not ret:
+                    print(f'reading "{video_path}" occurs some error ')
                     break
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 frame_tensor = transforms.ToTensor()(frame)
@@ -69,15 +70,20 @@ if __name__ == "__main__":
 
     i = 0
     # for task in JIGSAWS_tasks:
-    for task in ['Peg_Transfer']:
+    for task in JIGSAWS_tasks:
 
         video_paths = list()
 
         task_features_save_path = os.path.join(image_features_save_path, task)
+        print(f"task_features_save_path:{task_features_save_path}")
         if not os.path.exists(task_features_save_path):
             os.mkdir(task_features_save_path)
-
-        video_folder_path = os.path.join("./Datasets/dV/", task, 'video')
+        pwdPath = os.getcwd()      # '~/chenting/PredictionTrajectory/multimodalTransformer/data'
+        root_path = os.path.join(os.path.dirname(os.path.dirname(pwdPath)), "compassSurgicalActivityRecognition", "Datasets", "dV")
+        # print(f"the  curDir:{pwdPath}")
+        # print(f"the parent path of curDir:{os.path.dirname(pwdPath)}")
+        video_folder_path = os.path.join(root_path, task, 'video')
+        print(f"debug video_folder_path: {video_folder_path}")
         for file_name in os.listdir(video_folder_path):
             video_path = os.path.join(video_folder_path, file_name)
 

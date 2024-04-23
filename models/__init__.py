@@ -34,6 +34,6 @@ def initiate_model(input_dim, output_dim, transformer_params, learning_params, t
     scheduler = ReduceLROnPlateau(
         optimizer, mode='min', factor=0.1, patience=patience, verbose=True)
 
-    criterion = nn.CrossEntropyLoss()
+    criterion = nn.CrossEntropyLoss()  # 多分类
 
     return model, optimizer, scheduler, criterion

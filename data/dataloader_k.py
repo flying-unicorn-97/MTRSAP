@@ -23,13 +23,14 @@ class TimeSeriesDataset(Dataset):
 
         # start_idx = idx * self.seq_len
         # end_idx = (idx + 1) * self.seq_len
-        
+
         # t + 1 -- encoder input and gt output
-        
+        # [1,seq_len] [seq_len+1 2seq_len],,,[n*seq_len+1 (n+1)*seq_len+1]
         start_idx = (idx)*self.seq_len +1
         end_idx = (idx + 1)*self.seq_len + 1
         
-        # t -- decoder input + 
+        # t -- decoder input +
+        # [0 seq_len-1] [seq_len 2seq_len-1]
         ystart_idx = idx*self.seq_len
         yend_idx = (idx + 1)*self.seq_len 
 
@@ -51,7 +52,7 @@ class TimeSeriesDataset(Dataset):
         pad_lenyshifted = self.seq_len - batch_yshifted.shape[0]
         
         if pad_len > 0:
-            pad_shape = (pad_len,) + batch_x.shape[1:]
+            pad_shape = (pad_len,) + batch_x.shape[1:]    # (pad_len,batch_x.shape[1:])
             pad_shape_y = (pad_len,) + batch_y.shape[1:]
             pad_shape_yshifted = (pad_lenyshifted,) + batch_yshifted.shape[1:]
 
@@ -70,7 +71,9 @@ class TimeSeriesDataset(Dataset):
 
 def generate_data(subject_id, task, features, batch_size, seq_len):    
     
-    csv_path = './ProcessedDatasets/' + task
+    # csv_path = './ProcessedDatasets/' + task
+    projRootPath = os.getcwd()
+    csv_path = os.path.join(os.path.dirname(projRootPath),'compassSurgicalActivityRecognition/Datasets/dV', task, 'preprocessed')
     csv_files = glob.glob(csv_path + "/*.csv")
     
     
@@ -88,21 +91,25 @@ def generate_data(subject_id, task, features, batch_size, seq_len):
             
 
     print('Train Subject Trials: ',len(train_df_list))
-    print('Test Subject Trials: ',len(test_df_list))
+    print('Test Subject Trials: ', len(test_df_list))
     
     # Concatenate all DataFrames
-    train_df   = pd.concat(train_df_list, ignore_index=True)
-    test_df   = pd.concat(test_df_list, ignore_index=True)
+    train_df = pd.concat(train_df_list, ignore_index=True)
+    test_df = pd.concat(test_df_list, ignore_index=True)
 
-    train_df = train_df[train_df["label"]!="-"]
-    test_df = test_df[test_df["label"]!="-"]
+    # train_df = train_df[train_df["label"]!="-"]
+    # test_df = test_df[test_df["label"]!="-"]
+    train_df = train_df.dropna(axis=0, how ='any', ignore_index=True)
+    test_df = test_df.dropna(axis=0, how ='any', ignore_index=True)
     
-    lb = preprocessing.LabelBinarizer()
+    lb = preprocessing.LabelBinarizer()    # one-hot encoder
 
-    train_labels= train_df.pop('label')
+    #train_labels = train_df.pop('label')
+    train_labels = train_df.pop('Y')
     train_features = train_df
 
-    test_labels= test_df.pop('label')
+    # test_labels= test_df.pop('label')
+    test_labels = test_df.pop('Y')
     test_features = test_df
 
     lb.fit(train_labels)

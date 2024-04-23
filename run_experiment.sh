@@ -2,7 +2,7 @@
 
 echo "$HOSTNAME"
 conda init bash &&
-source activate pytorch 
+source activate icra24
 
 # Set the number of times to run the Python script
 # n=21

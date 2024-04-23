@@ -9,7 +9,7 @@ import glob
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from pathlib import Path
-from torch.optim.lr_scheduler import _LRScheduler, ReduceLROnPlateau
+from torch.optim.lr_scheduler import LRScheduler, ReduceLROnPlateau
 import json
 from typing import List
 import os

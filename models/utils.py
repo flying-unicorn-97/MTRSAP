@@ -6,7 +6,7 @@ import torch
 from torch import Tensor
 import torch.nn as nn
 import torch.optim as optim
-from torch.optim.lr_scheduler import _LRScheduler, ReduceLROnPlateau
+from torch.optim.lr_scheduler import LRScheduler, ReduceLROnPlateau
 import numpy as np
 from tqdm import tqdm
 import pandas as pd
@@ -100,7 +100,7 @@ def reset_parameters(module):
 # given a tensor of shape [batch,seq_len,features], finds the most common class within the sequence and returns [batch,features]
 def find_mostcommon(tensor, device):
 
-    batch_y_bin = torch.mode(tensor, dim=1).values
+    batch_y_bin = torch.mode(tensor, dim=1).values  # 众数
     batch_y_bin = batch_y_bin.to(device)
 
     return batch_y_bin
@@ -139,7 +139,7 @@ def eval_loop(model, test_dataloader, criterion, dataloader):
             inference_time = inference_time/src.shape[0] #divide by batch size to get time for single window
             inference_times.append(inference_time)
 
-            pred = torch.argmax(y_pred, dim=-1)
+            pred = torch.argmax(y_pred, dim=-1)  # the index of maximum,(y_pred.size()[0])
             gt = torch.argmax(y, dim=-1)  # maxpool
 
 
@@ -157,16 +157,16 @@ def eval_loop(model, test_dataloader, criterion, dataloader):
             accuracy += np.mean(pred == gt)
 
 
-        ypreds = np.concatenate(ypreds)
+        ypreds = np.concatenate(ypreds)    # concat along end axis, (num_batch*batch_size,)
         gts = np.concatenate(gts)
         
-        edit_distance = compute_edit_score(gts, ypreds)
+        edit_distance = compute_edit_score(gts, ypreds)  # 计算莱文斯坦距离
         f1_score = f1_at_X(gts,ypreds)
 
 
         accuracy = accuracy/n_batches
         inference_time = np.mean(inference_times)
-        print("Accuracy:", accuracy, 'Edit Score:',edit_distance, 'F1@X:',f1_score,'Inference Time per window:',inference_time)
+        print("Accuracy:", accuracy, 'Edit Score:',edit_distance, 'F1@X:',f1_score,'Inference Time per window:', inference_time)
 
 
         return np.mean(losses), accuracy, inference_time,  ypreds, gts, edit_distance, f1_score
@@ -178,7 +178,7 @@ def traintest_loop(train_dataloader, test_dataloader, model, optimizer, schedule
     accuracy = 0
     total_accuracy = []
     
-    ypreds, gts = [],[]
+    ypreds, gts = [], []
     highest_acc = 0
     highestypreds, highestygts = [],[]
     
@@ -202,7 +202,11 @@ def traintest_loop(train_dataloader, test_dataloader, model, optimizer, schedule
             y = find_mostcommon(tgt, device) #maxpool
             # y = tgt
    
-            y_pred =  model(src)  # [64,10]
+            y_pred = model(src)  # [batch_size,output_dim]
+            # input [batch_size,seq_len,input_dim]
+            # ypred [batch_size,output_dim]
+            # y  [batch_size,output_dim]
+            # tgt [batch_size,seq_len,output_dim]
             # print('input, prediction, yseq, gt:',src.shape, y_pred.shape,  y.shape, tgt.shape)
             # input()
             

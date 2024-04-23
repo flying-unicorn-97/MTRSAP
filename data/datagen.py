@@ -83,7 +83,8 @@ image_features_save_path = "./resnet_features/"
 
 def generate_data(task: str):
     processed_data_path = "./ProcessedDatasets"
-    root_path = os.path.join("./Datasets", "dV")
+    # root_path = os.path.join("./Datasets", "dV")
+    root_path = os.path.join(os.path.dirname(os.path.dirname(os.getcwd())), "compassSurgicalActivityRecognition", "Datasets", "dV")
     task_path = os.path.join(root_path, task)
     task_path_target = os.path.join(processed_data_path, task)
     gestures_path = os.path.join(task_path, "gestures")

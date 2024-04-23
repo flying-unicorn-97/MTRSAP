@@ -224,7 +224,8 @@ def save_artifacts(model, train_records, valid_records, valid_dataloader):
 
 ### -------------------------- DATA -----------------------------------------------------
 tasks = ["Suturing"]
-Features = kinematic_feature_names_jigsaws[38:] + state_variables  #kinematic features + state variable features
+#Features = kinematic_feature_names_jigsaws[38:] + state_variables  #kinematic features + state variable features
+Features = kinematic_feature_names + state_variables
 # Features = kinematic_feature_names_jigsaws_no_rot_ps + state_variables
 
 one_hot = False

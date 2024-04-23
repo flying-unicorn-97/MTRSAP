@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="27665f7e-2bfa-4ad1-9bda-910b54beb920" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datagen.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/datagen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataloader_k.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataloader_k.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image_feature_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/image_feature_extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inference_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/inference_recognition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_experiment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_experiment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_recognition.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="d5fdc5e5-ba13-41a6-ba79-80f939338852" />
+  <component name="ProjectId" id="2evw3L619ijOguEn79nVxw84quR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.train_prediction">
+    <configuration name="datagen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MTRSAP-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/datagen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="image_feature_extraction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MTRSAP-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/image_feature_extraction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_prediction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MTRSAP-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_prediction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_recognition" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MTRSAP-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_recognition.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.train_prediction" />
+        <item itemvalue="Python.datagen" />
+        <item itemvalue="Python.image_feature_extraction" />
+        <item itemvalue="Python.train_recognition" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27665f7e-2bfa-4ad1-9bda-910b54beb920" name="Default Changelist" comment="" />
+      <created>1712798159397</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712798159397</updated>
+      <workItem from="1712798160436" duration="7258000" />
+      <workItem from="1712887471556" duration="2656000" />
+      <workItem from="1713160389962" duration="5388000" />
+      <workItem from="1713165796373" duration="18798000" />
+      <workItem from="1713315403742" duration="13498000" />
+      <workItem from="1713410809467" duration="16207000" />
+      <workItem from="1713859978104" duration="1942000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="234" key="#Deployment" timestamp="1713165322210">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="552" y="234" key="#Deployment/0.0.1920.1152@0.0.1920.1152" timestamp="1713165322210" />
+    <state x="536" y="220" key="#SSH_Configurations" timestamp="1713165192000">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="536" y="220" key="#SSH_Configurations/0.0.1920.1152@0.0.1920.1152" timestamp="1713165192000" />
+    <state x="414" y="231" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1713165548036">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="414" y="231" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1152@0.0.1920.1152" timestamp="1713165548036" />
+    <state x="740" y="331" key="FileChooserDialogImpl" timestamp="1713142306161">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="740" y="331" key="FileChooserDialogImpl/0.0.1920.1152@0.0.1920.1152" timestamp="1713142306161" />
+    <state width="1485" height="99" key="GridCell.Tab.0.bottom" timestamp="1713522171131">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="1485" height="99" key="GridCell.Tab.0.bottom/0.0.1920.1152@0.0.1920.1152" timestamp="1713522171131" />
+    <state width="1485" height="99" key="GridCell.Tab.0.center" timestamp="1713522171131">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="1485" height="99" key="GridCell.Tab.0.center/0.0.1920.1152@0.0.1920.1152" timestamp="1713522171131" />
+    <state width="1485" height="99" key="GridCell.Tab.0.left" timestamp="1713522171131">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="1485" height="99" key="GridCell.Tab.0.left/0.0.1920.1152@0.0.1920.1152" timestamp="1713522171131" />
+    <state width="1485" height="99" key="GridCell.Tab.0.right" timestamp="1713522171131">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="1485" height="99" key="GridCell.Tab.0.right/0.0.1920.1152@0.0.1920.1152" timestamp="1713522171131" />
+    <state width="1485" height="99" key="GridCell.Tab.1.bottom" timestamp="1713522171131">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="1485" height="99" key="GridCell.Tab.1.bottom/0.0.1920.1152@0.0.1920.1152" timestamp="1713522171131" />
+    <state width="1485" height="99" key="GridCell.Tab.1.center" timestamp="1713522171131">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="1485" height="99" key="GridCell.Tab.1.center/0.0.1920.1152@0.0.1920.1152" timestamp="1713522171131" />
+    <state width="1485" height="99" key="GridCell.Tab.1.left" timestamp="1713522171131">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="1485" height="99" key="GridCell.Tab.1.left/0.0.1920.1152@0.0.1920.1152" timestamp="1713522171131" />
+    <state width="1485" height="99" key="GridCell.Tab.1.right" timestamp="1713522171131">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="1485" height="99" key="GridCell.Tab.1.right/0.0.1920.1152@0.0.1920.1152" timestamp="1713522171131" />
+    <state x="461" y="220" key="SettingsEditor" timestamp="1713412127224">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="461" y="220" key="SettingsEditor/0.0.1920.1152@0.0.1920.1152" timestamp="1713412127224" />
+    <state width="968" height="584" key="XDebugger.FullValuePopup" timestamp="1713418345432">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state width="968" height="584" key="XDebugger.FullValuePopup/0.0.1920.1152@0.0.1920.1152" timestamp="1713418345432" />
+    <state x="500" y="305" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1713420575942">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="500" y="305" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1152@0.0.1920.1152" timestamp="1713420575942" />
+    <state x="751" y="441" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1712800051990">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="751" y="441" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1920.1152@0.0.1920.1152" timestamp="1712800051990" />
+    <state x="662" y="308" width="596" height="536" key="find.popup" timestamp="1713496318235">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="662" y="308" width="596" height="536" key="find.popup/0.0.1920.1152@0.0.1920.1152" timestamp="1713496318235" />
+    <state x="840" y="305" width="569" height="539" key="ftp.server.browser" timestamp="1713165700879">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="840" y="305" width="569" height="539" key="ftp.server.browser/0.0.1920.1152@0.0.1920.1152" timestamp="1713165700879" />
+    <state x="623" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1713426697588">
+      <screen x="0" y="0" width="1920" height="1152" />
+    </state>
+    <state x="623" y="253" width="672" height="678" key="search.everywhere.popup/0.0.1920.1152@0.0.1920.1152" timestamp="1713426697588" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_recognition.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_recognition.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MTRSAP_main$datagen.coverage" NAME="datagen Coverage Results" MODIFIED="1713425152318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/MTRSAP_main$train_recognition.coverage" NAME="train_recognition Coverage Results" MODIFIED="1713160625076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MTRSAP_main$train_prediction.coverage" NAME="train_prediction Coverage Results" MODIFIED="1713426780521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MTRSAP_main$image_feature_extraction.coverage" NAME="image_feature_extraction Coverage Results" MODIFIED="1713420544035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+  </component>
+</project>
